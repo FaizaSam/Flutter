@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
+/*void main(List<String> args) {
   runApp(MaterialApp(
     title: 'Stateful app example',
     home: FavouriteCity(),
@@ -46,5 +46,46 @@ class _FavouriteCityState extends State<FavouriteCity> {
         ),
       ),
     );
+  }
+}*/
+void main(List<String> args) {
+  runApp(new DogApp());
+}
+
+class DogApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'My Dog App',
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('My App'),
+          ),
+          body: Center(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              DecoratedBox(
+                  decoration: BoxDecoration(color: Colors.lightGreenAccent),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Rocky'),
+                  )),
+              SizedBox(height: 8.0),
+              DecoratedBox(
+                  decoration: BoxDecoration(color: Colors.lightGreenAccent),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Lyla'),
+                  )),
+              SizedBox(height: 8.0),
+              DecoratedBox(
+                  decoration: BoxDecoration(color: Colors.lightGreenAccent),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Nico'),
+                  )),
+            ]),
+          ),
+        ));
   }
 }
